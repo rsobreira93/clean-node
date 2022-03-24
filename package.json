@@ -5,7 +5,7 @@
   "author": "rsobreira93 <sobreiraromuloes@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "test:staged": "jest"
   },
   "devDependencies": {
