@@ -1,48 +1,16 @@
 {
-    "env": {
-        "es2021": true,
-        "node": true,
-        "jest": true
-    },
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "extends": [
-        "airbnb-base",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "prettier/@typescript-eslint",
-        "prettier",
-        "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
+    "extends": "standard-with-typescript",
     "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+        "project": "./tsconfig.json"
     },
-    "plugins": [
-        "@typescript-eslint",
-        "prettier"
-    ],
     "rules": {
-        "prettier/prettier": "error",
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never"
-            }
-        ]
-    },
-    "@typescript-eslint/interface-name-prefix": [
-        "error",
-        {
-            "prefixWithI": "always"
-        }
-    ],
-    "settings": {
-        "import/resolver": {
-            "typescript": {}
-        }
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/comma-spacing": "off",
+        "@typescript-eslint/return-await": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "import/export": "off"
     }
 }
