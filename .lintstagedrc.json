@@ -1,5 +1,3 @@
 {
-  "*.ts": [
-    "yarn eslint --ext ts --fix"
-  ]
+  "*.ts": ["eslint 'src/**' --fix", "yarn run test:staged"]
 }
