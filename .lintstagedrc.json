@@ -1,3 +1,6 @@
 {
-  "*.ts": ["eslint 'src/**' --fix", "yarn run test:staged"]
+  "src/**/*.ts": [
+    "yarn eslint --ext ts --fix",
+    "yarn test --bail --findRelatedTests"
+  ]
 }
