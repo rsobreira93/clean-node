@@ -1,3 +1,4 @@
+import { ServerError } from '../errors';
 import { HttpResponse } from '../protocols/http';
 
 export const badRequest = (error: Error): HttpResponse => ({
@@ -7,5 +8,5 @@ export const badRequest = (error: Error): HttpResponse => ({
 
 export const serverError = (): HttpResponse => ({
   statusCode: 500,
-  body: new Error(),
+  body: new ServerError(),
 });
