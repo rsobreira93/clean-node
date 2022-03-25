@@ -12,7 +12,7 @@
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage",
     "prepare": "husky install",
-    "commit": "cz"
+    "git commit": "git-cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
