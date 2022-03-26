@@ -2,8 +2,8 @@ import brcrypt from 'bcrypt';
 import { BcryptAdapter } from './bcypt-adapter';
 
 jest.mock('bcrypt', () => ({
-  async hash(value: string, salt: number): Promise<string> {
-    return Promise.resolve('hashed_value');
+  async hash(): Promise<string> {
+    return Promise.resolve('hash');
   },
 }));
 
@@ -23,6 +23,17 @@ describe('Bcrypt Adapter', () => {
   test('Should return a hash on sucess', async () => {
     const sut = makeSut();
     const hash = await sut.encrypt('any_value');
-    expect(hash).toBe('hashed_value');
+    expect(hash).toBe('hash');
   });
+
+  //   test('Should thow if bcrypt throws', async () => {
+  //     const sut = makeSut();
+  //     jest
+  //       .spyOn(brcrypt, 'hash')
+  //       .mockReturnValueOnce(
+  //         new Promise((resolve, reject) => reject(new Error()))
+  //       );
+  //     const promise = sut.encrypt('any_value');
+  //     await expect(promise).rejects.toThrow();
+  //   });
 });

@@ -5,6 +5,7 @@ export class BcryptAdapter implements Encrypter {
   constructor(salt: number) {
     this.salt = salt;
   }
+
   async encrypt(value: string): Promise<string> {
     const hash = await bcrypt.hash(value, this.salt);
 
